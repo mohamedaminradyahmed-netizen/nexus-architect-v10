@@ -10,11 +10,23 @@ View your app in AI Studio: https://ai.studio/apps/drive/1t1CNBRgfljmCBW8HUj6LCO
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js (front-end) and a Gemini API key (backend)
 
+### 1) Install dependencies
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- Frontend: `npm install`
+- Backend: `cd backend && npm install`
+
+### 2) Configure environment variables
+
+- Copy `backend/.env.example` to `backend/.env` and set `GEMINI_API_KEY` to your Gemini key.
+- The backend listens on port `3001`; the Vite dev server proxies `/api` requests there.
+
+### 3) Run the app
+
+- Backend: `cd backend && npm run dev`
+- Frontend: in a separate shell, from the repo root run `npm run dev`
+
+---
+
+For production builds, run `npm run build` from the root. The Vite config already proxies `/api` to the backend.
