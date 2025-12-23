@@ -1,0 +1,7 @@
+{
+  "name": "Nexus Architect v10",
+  "description": "Enterprise-grade agentic UI architect using backend-driven logic, state persistence, and design system enforcement.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
