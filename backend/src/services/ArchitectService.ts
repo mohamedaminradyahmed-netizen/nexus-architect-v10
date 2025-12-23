@@ -43,9 +43,9 @@ export class ArchitectService {
 
     private getClient(): GoogleGenAI {
         if (!this.client) {
-            const apiKey = process.env.API_KEY;
+            const apiKey = process.env.GEMINI_API_KEY;
             if (!apiKey) {
-                throw new Error("تكوين غير صالح: مفتاح API مفقود (API_KEY).");
+                throw new Error("تكوين غير صالح: مفتاح Gemini مفقود (GEMINI_API_KEY).");
             }
             this.client = new GoogleGenAI({ apiKey });
         }
